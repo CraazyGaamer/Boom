@@ -30,8 +30,8 @@ body {
   margin-top: 7em;
 }
 .font {
-  font-size: 25px;
-  color: #adadad;
+  font-size: 22px;
+  color: #a09f9f;
 }
 .fb {
   background-image: url(https://raw.githubusercontent.com/jm-program/css-task/236629ad7226d4d4ba0cdc05160c9d181a1d1807/img/facebook.svg);
@@ -70,26 +70,30 @@ hr:after {
     content: 'OR';
     padding: 0 7px;
     position: relative;
-    top: -25px;
+    top: -11px;
     font-size: 12px;
     color: black;
 }
 .email {
   width: 400px;
   height: 60px;
-  font-size: 60%;
+  font-size: 20px;
   margin-right: 25px;
-  border: 1px solid rgb(214, 214, 214);
+  margin-top: 33px;
+  
 }
 .email::placeholder {
 position: relative;
 top: -15px;
 left: 7px;
 }
+.email:focus {
+  border-left: solid blue;
+}
 .phone {
   width: 400px;
   height: 60px;
-  font-size: 60%;
+  font-size: 20px;
   border: 1px solid rgb(214, 214, 214);
 }
 .phone::placeholder {
@@ -97,37 +101,51 @@ position: relative;
 top: -15px;
 left: 7px;
 }
-h2 {
-  font-size: 25px;
+.phone:focus {
+  border-left: solid blue;
+}
+.h1 {
+  font-size: 30px;
+}
+.h2 {
+  font-size: 22px;
   margin-top: 5%;
 }
-h3 {
+.h3 {
   font-size: 17px;
-  color: #adadad;
+  color: #a09f9f;
 }
 .radio {
-  margin-top: 5%;
-  font-size: 60%;
+  margin-top: 5%; 
 }
 .rad {
+  font-size: 20px;
   width: 150px;
   margin-right: 60px;
   float: left;
 }
 .rad1 {
+  font-size: 20px;
   width: 300px;
   float: left; 
+}
+.notification {
+  border: 1px solid #979797;
+  background-color: white;
+  font-size: 10px;
+  border-radius: 30px;
+  width: 17px;
+  height: 15px;
 }
 .note {
   visibility: hidden;
   font-size: 14px;
   color: rgb(185, 185, 185);
   width: 150px;
+  box-shadow: 10px 10px 20px rgb(236, 236, 236), -10px 0px 20px rgb(236, 236, 236);
+  padding: 8px;
 }
-a {
-    font-size: 15px;
-  }
-a:focus + .note {
+.notification:focus + .note {
  visibility: visible; 
 }
 .check {
@@ -146,6 +164,7 @@ a:focus + .note {
   height: 50px;
   border-radius: 5px;
   color: white;
-  font-size: 60%;
+  font-size: 17px;
+  font-weight: bold;
   margin-top: 70px;
 }
