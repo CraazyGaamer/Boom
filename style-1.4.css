@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  font-family: 'TT Lakes Medium';
+  list-style-type: none;
+}
+@font-face {
+  font-family: 'TT Lakes';
+  src: url(TTLakes-Regular.woff);
+}
+@font-face {
+  font-family: 'TT Lakes Bold';
+  src: url(TTLakes-Bold.woff);
+}
+@font-face {
+  font-family: 'TT Lakes Medium';
+  src: url(TTLakes-Medium.woff);
+}
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  height: 100vh;
+  font-size: 16px;
+  box-shadow: 0px 0px 60px 20px #d0d3e0;
+}
+.body__aside {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  padding-top: 19px;
+  padding-bottom: 32px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.button {
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  background: none;  
+  transition: all 0.7s ease;
+}
+.header__button {
+  width: 98px;
+  Height: 52px;
+  border: none;
+  background: none; 
+  margin-left: -40px;
+  transition: all 0.7s ease;
+}
+.header__button:hover {
+  transform: scale(1.1);
+}
+.button:hover {
+  transform: scale(1.1);
+  filter: invert(0.9) brightness(1.4);
+}
+.wrapper__menu {
+  margin-top: 45px;
+  padding: 0;
+}
+.item {
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+.menu__item {
+  margin-bottom: 24px;
+  padding-left: 24px;
+}
+.item__button {
+  border: none;
+  background: none;  
+  font-size: 16px; 
+  color: inherit;
+}
+.item--active {
+  position: relative;
+  color: #7E7E82;
+}
+.item--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 32px;
+  background: #41F6D7;
+  border-radius: 0 5px 5px 0;
+}
+.aside__footer {
+  margin-left: 24px;
+}
+.contacts__button {
+  margin-right: 16px;
+  padding: 0;
+  border-radius: 50%;
+}
+img {
+  border-radius: 50%;
+}
+.header__button > img {
+  border-radius: 0;
+}
+.contacts__mail {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: #1B1C21;
+}
+.contacts__number {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: 'TT Lakes Bold';
+}
+.footer__languages {
+  margin-top: 40px;
+}
+.languages__item {
+  text-decoration: none;
+  color: #1B1C21;
+  margin-right: 5px;
+}
+.languages__item:focus {
+  color: #7E7E82;
+}
