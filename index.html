@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Swiper demo</title>
+    <!-- Link Swiper's CSS -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+   <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class='body'>
+
+
+
+    <div class='title'>
+      <p class='title__text'>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</p>
+    </div>  
+   
+    <div class="swiper-container body__swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src='https://i.ibb.co/qF1JdG8/Bitmap.png'><button class='swiper-slide__button' type='button'></button></div>
+        <div class="swiper-slide"><img src='https://i.ibb.co/25bpjdG/Bitmap-1.png'><button class='swiper-slide__button' type='button'></button></div>
+        <div class="swiper-slide"><img src='https://i.ibb.co/Dz1vMBM/Bitmap-2.png'><button class='swiper-slide__button' type='button'></button></div>
+        <div class="swiper-slide"><img src='https://i.ibb.co/Lg1TPCf/Bitmap-6.png'><button class='swiper-slide__button' type='button'></button></div>
+        <div class="swiper-slide"><img src='https://i.ibb.co/0ZcnM3g/Bitmap-3.png'><button class='swiper-slide__button' type='button'></button></div>
+        <div class="swiper-slide"><img src='https://i.ibb.co/r3YsTsC/Bitmap-4.png'><button class='swiper-slide__button' type='button'></button></div>
+        <div class="swiper-slide"><img src='https://i.ibb.co/VxQrsnQ/Bitmap-5.png'><button class='swiper-slide__button' type='button'></button></div>
+        <div class="swiper-slide"><img src='https://i.ibb.co/JrQp7BH/Bitmap-7.png'><button class='swiper-slide__button' type='button'></button></div>
+        <div class="swiper-slide"><img src='https://i.ibb.co/qF1JdG8/Bitmap.png'><button class='swiper-slide__button' type='button'></button></div>
+        <div class="swiper-slide"><img src='https://i.ibb.co/25bpjdG/Bitmap-1.png'><button class='swiper-slide__button' type='button'></button></div>
+        <div class="swiper-slide"><img src='https://i.ibb.co/Dz1vMBM/Bitmap-2.png'><button class='swiper-slide__button' type='button'></button></div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <button class='swiper-container__button'>Показать все</button>
+
+    </div>
+
+   
+   
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    
+    
+    
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            allowSlideNext: false,
+            allowSlidePrev: false
+          }
+        }
+      });
+ 
+      window.addEventListener("resize", function() {
+        if (screen.width < 768) {
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            allowSlideNext: false,
+            allowSlidePrev: false
+          }
+        }
+      });
+      }
+      });
+      let button = document.querySelector('.swiper-container__button');
+      let swiperWrapper = document.querySelector('.swiper-wrapper');
+      button.addEventListener('click', function() {
+        if ( button.textContent === 'Показать все' ) {
+        swiperWrapper.classList.add('large');
+        button.textContent = 'Скрыть';
+        button.classList.add('arrows-top');
+        } else {
+          swiperWrapper.classList.remove('large');
+          button.textContent = 'Показать все';
+          button.classList.remove('arrows-top');
+        }
+      })
+    </script>
+
+
+  </body>
+</html>
