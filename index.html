@@ -1,100 +1,326 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <title>Swiper demo</title>
-    <!-- Link Swiper's CSS -->
-   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-   <link rel="stylesheet" href="style.css">
-  </head>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
 
-  <body class='body'>
+    
+    
+  <link href="style.css" rel="stylesheet"></head>
+
+  <body class="body">
+
+    
+
+    <aside class="aside body__aside">
+
+      <div class="wrapper">
+      <header class="header">
+        <button class="button" id="button-close" type="button"><img src="https://i.ibb.co/C8Mj00m/burger.png"></button>
+        <button class="logo-button header__logo-button" type="button"><img src="https://i.ibb.co/Z12L5xt/Group.png"></button>
+        <button class="button header__button" type="button"><img src="https://i.ibb.co/k4R8M4B/search.png"></button>
+      </header>
+
+      <ul class="menu wrapper__menu">
+        <li class="item menu__item item--active"> 
+          <button class="item__button" type="button">Ремонт техники</button>
+        </li>
+        <li class="item menu__item"> 
+          <button class="item__button" type="button">Услуги и сервисы</button>
+        </li>
+        <li class="item menu__item">
+          <button class="item__button" type="button">Корпоративным клиентам</button>
+        </li>
+        <li class="item menu__item">
+          <button class="item__button" type="button">Продавцам техники</button>
+        </li>
+        <li class="item menu__item">
+          <button class="item__button" type="button">Партнёрам</button>
+        </li>
+        <li class="item menu__item">
+          <button class="item__button" type="button">Производителям</button>
+        </li>
+        <li class="item menu__item">
+          <button class="item__button" type="button">Наши сервисные центры</button>
+        </li>
+        <li class="item menu__item">
+          <button class="item__button" type="button">Контакты</button>
+        </li>
+      </ul>  
+      </div>   
+
+      <div class="footer aside__footer">
+        <div class="contacts">
+          <button class="button contacts__button" id="phone-1" type="button"><img src="https://i.ibb.co/Y2VsWpP/call.png"></button>
+          <button class="button contacts__button" id="message-1" type="button"><img src="https://i.ibb.co/JHYpDQt/chat.png"></button>
+          <button class="button contacts__button" type="button"><img src="https://i.ibb.co/0YWrZTg/profile.png"></button>
+
+          <a class="contacts__mail" href="#">mail@cps.com</a>
+
+          <span class="contacts__number">8 800 890 8900</span>
+        </div>
+        
+        <div class="languages footer__languages">
+          <a class="languages__item" href="#">RU</a> 
+          <a class="languages__item" href="#">EN</a> 
+          <a class="languages__item" href="#">CH</a>
+        </div>
+         
 
 
 
-    <div class='title'>
-      <p class='title__text'>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</p>
+    </div></aside>
+
+    <div class="call-order body__call-order">
+      <button class="button call-order__button"><img src="https://i.ibb.co/C8Mj00m/burger.png"></button>
+      <p class="call-order__title">Заказать звонок</p>
+      <form class="form">
+        <input class="tel-input" type="tel" placeholder="Телефон">
+        <p class="notice">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
+        <button class="form__button" type="submit"></button>
+      </form>  
+    </div>  
+
+
+     <div class="call-order body__call-order message-send">
+      <button class="button call-order__button message-send__button"><img src="https://i.ibb.co/C8Mj00m/burger.png"></button>
+      <p class="call-order__title">Обратная связь</p>
+      <form class="form">
+        <input class="input-area tel-input form__input-area" type="text" placeholder="Имя">
+        <input class="input-area tel-input form__input-area" type="tel" placeholder="Телефон">
+        <input class="input-area tel-input form__input-area" type="email" placeholder="Электронная почта">
+        <textarea class="input-area tel-input form__input-area" placeholder="Сообщение"></textarea>
+        <p class="notice">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
+        <button class="form__button" type="submit"></button>
+      </form>  
+    </div>  
+
+
+    <div class="blur-area"></div>
+
+
+
+     
+
+
+
+    <div class="container size">
+      <div class="header-wrapper header-wrapper--invisible"><header class="header size">
+        <div class="logo-nav">
+          <button class="button" id="button-burger" type="button"><img src="https://i.ibb.co/74xRxt4/burger.png"></button>
+          <button class="logo-button logo-nav__logo-button" type="button"><img src="https://i.ibb.co/Z12L5xt/Group.png"></button>
+          <div class="vertical-line logo-nav__vertical-line"></div>
+        </div>  
+        <div class="tools-search">
+          <button class="button button--visible button--invisible" id="phone" type="button"><img src="https://i.ibb.co/Y2VsWpP/call.png"></button>
+          <button class="button button--visible button--invisible" id="message" type="button"><img src="https://i.ibb.co/JHYpDQt/chat.png"></button>
+          <button class="button button--visible button--invisible" id="tools" type="button"><img src="https://i.ibb.co/0YWrZTg/profile.png"></button>
+          <div class="vertical-line vertical-line--visible vertical-line--invisible"></div>
+          <button class="button" id="tools" type="button"><img src="https://i.ibb.co/VwRjt3k/repair.png"></button>
+          <button class="button" id="search" type="button"><img src="https://i.ibb.co/G0NwXMx/checkstatus.png"></button>
+        </div>
+        
+      </header> </div> 
+      <main class="main">
+        <div class="head-title-wrapper main__head-title-wrapper">
+          <div class="head-title">
+            <div class="head-title__vertical-line">
+            </div>
+            <div class="head-title__text">Услуги и сервисы
+            </div>
+          </div>
+          <div class="tools-search tools-search--visible tools-search--invisible">
+            <label for="tools">Оставить заявку</label><button class="button" id="tools" type="button"><img src="https://i.ibb.co/VwRjt3k/repair.png"></button>
+            <label for="search">Статус ремонта</label><button class="button" id="search" type="button"><img src="https://i.ibb.co/G0NwXMx/checkstatus.png"></button>
+          </div>
+        </div>
+        
+      <div class="nav-wrapper">  
+        <ul class="nav nav-wrapper__nav">
+
+          <li class="n-button nav__n-button">
+            <input class="n-button__input" type="radio" id="first-button" name="none">
+            <label for="first-button" class="n-button__text">Ремонтируемые устройства</label>
+          </li>
+
+          <li class="n-button nav__n-button">
+            <input class="n-button__input" type="radio" id="second-button" name="none">
+            <label for="second-button" class="n-button__text">Дополнительные услуги</label>
+          </li>
+
+          <li class="n-button nav__n-button">
+            <input class="n-button__input" type="radio" id="third-button" name="none">
+            <label for="third-button" class="n-button__text">Цены за услуги</label>
+          </li>
+
+          <li class="n-button nav__n-button">
+            <input class="n-button__input" type="radio" id="fourth-button" name="none">
+            <label for="fourth-button" class="n-button__text">Адреса сервисных центров</label>
+          </li>
+
+          <li class="n-button nav__n-button">
+            <input class="n-button__input" type="radio" id="fifth-button" name="none">
+            <label for="fifth-button" class="n-button__text">Специальные цены</label>
+          </li>  
+
+        </ul>
+      </div> 
+
+      <p class="main__comments">Отзывы</p>
+
+      <div class="description main__description"> 
+        <p class="description__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br>
+              <button class="description__read-more-button">Читать далее</button>
+              </p>
+        
+        <img class="description__logo" src="https://i.ibb.co/BNyVLtb/image-1120.jpg">
+      </div>  
+        
+      </main>  
+
+      
+       
+
+  <div class="slider">
+      <div class="title">
+      <p class="title__text">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</p>
     </div>  
    
-    <div class="swiper-container body__swiper-container mySwiper">
+    <div class="swiper-container slider__swiper-container mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src='https://i.ibb.co/qF1JdG8/Bitmap.png'><button class='swiper-slide__button' type='button'></button></div>
-        <div class="swiper-slide"><img src='https://i.ibb.co/25bpjdG/Bitmap-1.png'><button class='swiper-slide__button' type='button'></button></div>
-        <div class="swiper-slide"><img src='https://i.ibb.co/Dz1vMBM/Bitmap-2.png'><button class='swiper-slide__button' type='button'></button></div>
-        <div class="swiper-slide"><img src='https://i.ibb.co/Lg1TPCf/Bitmap-6.png'><button class='swiper-slide__button' type='button'></button></div>
-        <div class="swiper-slide"><img src='https://i.ibb.co/0ZcnM3g/Bitmap-3.png'><button class='swiper-slide__button' type='button'></button></div>
-        <div class="swiper-slide"><img src='https://i.ibb.co/r3YsTsC/Bitmap-4.png'><button class='swiper-slide__button' type='button'></button></div>
-        <div class="swiper-slide"><img src='https://i.ibb.co/VxQrsnQ/Bitmap-5.png'><button class='swiper-slide__button' type='button'></button></div>
-        <div class="swiper-slide"><img src='https://i.ibb.co/JrQp7BH/Bitmap-7.png'><button class='swiper-slide__button' type='button'></button></div>
-        <div class="swiper-slide"><img src='https://i.ibb.co/qF1JdG8/Bitmap.png'><button class='swiper-slide__button' type='button'></button></div>
-        <div class="swiper-slide"><img src='https://i.ibb.co/25bpjdG/Bitmap-1.png'><button class='swiper-slide__button' type='button'></button></div>
-        <div class="swiper-slide"><img src='https://i.ibb.co/Dz1vMBM/Bitmap-2.png'><button class='swiper-slide__button' type='button'></button></div>
+        <div class="swiper-slide"><img src="https://i.ibb.co/qF1JdG8/Bitmap.png"><button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide"><img src="https://i.ibb.co/25bpjdG/Bitmap-1.png"><button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide"><img src="https://i.ibb.co/Dz1vMBM/Bitmap-2.png"><button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide"><img src="https://i.ibb.co/Lg1TPCf/Bitmap-6.png"><button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide"><img src="https://i.ibb.co/0ZcnM3g/Bitmap-3.png"><button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide"><img src="https://i.ibb.co/r3YsTsC/Bitmap-4.png"><button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide"><img src="https://i.ibb.co/VxQrsnQ/Bitmap-5.png"><button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide"><img src="https://i.ibb.co/JrQp7BH/Bitmap-7.png"><button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide"><img src="https://i.ibb.co/qF1JdG8/Bitmap.png"><button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide"><img src="https://i.ibb.co/25bpjdG/Bitmap-1.png"><button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide"><img src="https://i.ibb.co/Dz1vMBM/Bitmap-2.png"><button class="swiper-slide__button" type="button"></button></div>
       </div>
       <div class="swiper-pagination"></div>
 
-      <button class='swiper-container__button'>Показать все</button>
+      <button class="swiper-container__button">Показать все</button>
 
     </div>
 
+  </div>
+
+
+
+
+
+
+<div class="slider">
+      <div class="title">
+      <p class="title__text">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</p>
+    </div>  
    
+    <div class="swiper-container swiper-container--tech slider__swiper-container mySwiper">
+      <div class="swiper-wrapper swiper-wrapper--tech">
+        <div class="swiper-slide swiper-slide--tech">Ремонт ноутбуков<button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide swiper-slide--tech">Ремнот планшетов<button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide swiper-slide--tech">Ремонт ПК<button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide swiper-slide--tech">Ремонт мониторов<button class="swiper-slide__button" type="button"></button></div>
+        
+      </div>
+      <div class="swiper-pagination swiper-pagination--tech"></div>
+
+      <button class="swiper-container__button" id="button-tech">Показать все</button>
+
+    </div>
+
+  </div>
+
+
+
+<div class="slider">
+      <div class="title">
+      <p class="title__text">ЦЕНЫ НА УСЛУГИ</p>
+    </div>  
    
-    <!-- Swiper JS -->
+    <div class="swiper-container swiper-container--price slider__swiper-container mySwiper">
+      <div class="service swiper-container__service">
+        <p class="service__repair">Ремонтные услуги</p>
+        <p class="service__price">Цена</p>
+        <p class="service__time">Срок</p>
+      </div>
+      <div class="swiper-wrapper swiper-wrapper--price">
+        <div class="swiper-slide swiper-slide--price">
+          <p class="swiper-slide__item-1">Диагностика</p>
+          <p class="swiper-slide__item-2">Бесплатно</p>
+          <span class="swiper-slide__item-3">30 мин</span>
+          <button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide swiper-slide--price">
+          <p class="swiper-slide__item-1">Замена дисплея</p>
+          <p class="swiper-slide__item-2">1000 &#8381</p>
+          <span class="swiper-slide__item-3">30-120 мин</span>
+          <button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide swiper-slide--price">
+          <p class="swiper-slide__item-1">Замена полифонического динамика</p>
+          <p class="swiper-slide__item-2">1000 &#8381</p>
+          <span class="swiper-slide__item-3">30-120 мин</span>
+          <button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide swiper-slide--price">
+          <p class="swiper-slide__item-1">Тестирование с выдачей технического заключения</p>
+          <p class="swiper-slide__item-2">1000 &#8381</p>
+          <span class="swiper-slide__item-3">30-120 мин</span>
+          <button class="swiper-slide__button" type="button"></button></div>
+        <div class="swiper-slide swiper-slide--price">
+          <p class="swiper-slide__item-1">Замена программного обеспечения</p>
+          <p class="swiper-slide__item-2">1000 &#8381</p>
+          <span class="swiper-slide__item-3">30-120 мин</span>
+          <button class="swiper-slide__button" type="button"></button></div>
+        
+        
+      </div>
+      <div class="swiper-pagination swiper-pagination--price"></div>
+
+      
+      <div class="offer swiper-container__offer">
+        <p class="offer__text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание оставьте заявку.</p>
+        <a class="offer__link" href="#">Получить коммерческое предложение</a>
+      </div>  
+
+    </div>
+
+  </div>
+
+  <div class="main-footer container__main-footer">
+    <p class="main-footer__item"><span>© 2019 CPS</span> Разработано командой Apesong</p> 
+    <p class="main-footer__item">Политика конфиденциальности</p>
+    <p class="main-footer__item">Информация, размещенная на данной странице, не является публичной офертой</p>
+  </div>  
+  
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     
     
     
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        spaceBetween: 16,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          768: {
-            allowSlideNext: false,
-            allowSlidePrev: false
-          }
-        }
-      });
- 
-      window.addEventListener("resize", function() {
-        if (screen.width < 768) {
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        spaceBetween: 16,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          768: {
-            allowSlideNext: false,
-            allowSlidePrev: false
-          }
-        }
-      });
-      }
-      });
-      let button = document.querySelector('.swiper-container__button');
-      let swiperWrapper = document.querySelector('.swiper-wrapper');
-      button.addEventListener('click', function() {
-        if ( button.textContent === 'Показать все' ) {
-        swiperWrapper.classList.add('large');
-        button.textContent = 'Скрыть';
-        button.classList.add('arrows-top');
-        } else {
-          swiperWrapper.classList.remove('large');
-          button.textContent = 'Показать все';
-          button.classList.remove('arrows-top');
-        }
-      })
-    </script>
-
-
-  </body>
+    
+  <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
