@@ -1,0 +1,11 @@
+.size {
+   min-width: 320px;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.container {
+  @media (min-width: 1440px) {
+    transform: translateX(320px);
+  }
+}

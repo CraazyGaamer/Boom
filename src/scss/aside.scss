@@ -1,0 +1,172 @@
+.body__aside {
+  position: fixed;
+  transform: translateX(-400px);
+  left: 0px;
+  top: 0px;
+  padding-top: 19px;
+  padding-bottom: 32px;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  height: 100vh;
+  font-size: 16px;
+  background-color: white;
+  box-shadow: 0px 0px 60px 20px $colLight;
+  font-family: $fontRegular;
+
+  @media (min-width: 1440px) {
+    position: absolute;
+    transform: translateX(0px);
+    box-shadow: none;
+    z-index: 0;
+  }
+
+  #button-close {
+    @media (min-width: 1440px) {
+    display: none;
+    }
+  }
+}
+
+.aside--visible {
+  transform: translateX(0px);
+  z-index: 3;
+}
+
+.header {
+  display: flex;
+  height: 13vh;
+  padding: 15px;
+  background: white;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  background: none;  
+  transition: all 0.7s ease;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  filter: invert(0.9) brightness(1.4);
+}
+
+.logo-button {
+  width: 98px;
+  Height: 52px;
+  border: none;
+  background: none; 
+  transition: all 0.7s ease;
+}
+
+.header__logo-button {
+  margin-left: -40px;
+
+  @media (min-width: 1440px) {
+  margin-left: 0;
+  }
+}
+
+.logo-button:hover {
+  transform: scale(1.1);
+}
+
+.header__button {
+  @media (min-width: 1440px) {
+  margin-right: 20px;
+  }
+}
+
+.menu {
+
+  @media (min-width: 1440px) {
+  overflow: visible;
+  margin-top: 0;
+  }
+}
+
+.wrapper__menu {
+  margin-top: 45px;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+
+.menu__item {
+  margin-bottom: 24px;
+  padding-left: 24px;
+}
+
+.item--active {
+  position: relative;
+  color: $colGray;
+}
+
+.item--active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 32px;
+  background: $colLightGreen;
+  border-radius: 0 5px 5px 0;
+}
+
+.item__button {
+  border: none;
+  background: none;  
+  font-size: 16px; 
+  color: inherit;
+}
+
+.aside__footer {
+  margin-left: 24px;
+}
+
+.contacts__button {
+  margin-right: 16px;
+  padding: 0;
+  border-radius: 50%;
+}
+.contacts__mail {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-family: $fontRegular;
+}
+
+.contacts__number {
+  font-size: 24px;
+  font-family: $fontBold;
+  line-height: 32px;
+}
+
+.footer__languages {
+  margin-top: 40px;
+}
+
+.languages__item {
+  text-decoration: none;
+  color: black;
+  margin-right: 5px;
+}
+
+.languages__item:focus {
+  color: $colGray;
+}

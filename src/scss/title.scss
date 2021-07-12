@@ -1,0 +1,25 @@
+.title {
+  display: flex;
+  align-items: center;
+  min-width: 320px;
+  height: 80px;
+  font-size: 16px;
+  font-family: $fontRegular;
+  color: $colGray;
+  background: linear-gradient(270deg, white 0%, $colLightGray 98.61%);
+}
+
+.title__text {
+  font-size: 16px;
+  color: $colGray;
+  margin: 16px;
+  font-family: $fontMedium;
+  
+  @media (min-width: 768px) {
+    margin: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    margin: 32px;
+  }
+}

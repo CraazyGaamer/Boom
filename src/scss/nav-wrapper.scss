@@ -1,0 +1,54 @@
+.nav-wrapper {
+  overflow: hidden;
+}
+
+.nav {
+  display: flex;
+  overflow: auto;
+  height: 50px;
+}
+
+.nav-wrapper__nav {
+  margin-top: 3vh;
+  margin-left: -15px;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+.n-button {
+  flex: 0 0 250px;
+  align-self: flex-end;
+  height: 40px;
+  font-size: 16px;
+  font-family: $fontRegular;
+  color: $colGray;
+}
+.nav__n-button {
+  margin-right: 10px;
+}
+.n-button:nth-child(2) {
+  flex: 0 0 220px;
+}
+.n-button:nth-child(3) {
+  flex: 0 0 150px;
+}  
+
+.n-button__input {
+  display: none;
+}
+
+.n-button__text {
+  margin: auto; 
+  font-size: 16px;
+  padding: 6px 15px;
+  font-weight: normal;
+  color: $colGray;
+}
+.n-button__input:checked + .n-button__text {
+  background: white;
+  border: 2px solid #B8FFEC;
+  border-radius: 6px;
+}
+
